@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<a name="up"></a>
+<head>
+	<script src="file:///E:/fotoclub/script.js"></script>
+	<title>Портрет</title>
+	<script>
+	
+	function inicialization(){
+		if(confirm ("Вы готовы?")){
+			var name=prompt ("Пожалуйста, введите свое имя: ");
+		if (confirm ("Вы уверены?")){
+		}
+		else{
+		var name=prompt ("Пожалуйста, введите свое имя: ");
+		}
+		document.getElementById("name").innerHTML = name;
+		
+		}
+	}
+	function valid (form){
+		var fail=false;
+		var name=form.name.value;
+		var password=form.password.value;
+		var Repassword=form.Repassword.value;
+		var sex=form.sex.value;
+		var email=form.email.value;
+		var adr_pattern=/[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i;
+		if (name=="" || name==" "){
+			fail="Вы не ввели свое имя";
+			}
+				else if (password ==""|| password==" "){
+					fail="Вы не ввели пароль";
+					}
+						else if (password!=Repassword){
+							fail="Пароли не совпадают";
+							}
+								else if (adr_pattern.test(email)==false){
+									fail="Вы ввели неверный email";
+									}
+								else if (sex==""){
+									fail="Выберите пол";
+									}
+										else
+											window.location="http://google.com";
+		if (fail){
+			alert(fail);
+		}
+			
+	}
+	/*var id=setInterval("myFunct_1()",1000);
+	var counter = 0;
+	function myFunct_1(){
+		counter ++;
+		alert("секунд прошло:"+counter);
+		if (counter==3) clearInterval(id);
+	}*/
+	/*var counter = 0;
+	function timer(){
+		counter++;
+		document.getElementById("count").innerHTML=counter;
+		setTimeout("timer()",1000);
+	}
+	/*var text_1="Число ПИ:"+Math.PI;
+		text_1+="\nЧисло E:"+Math.E;
+		text_1+="\nМодуль -7:"+Math.abs(-7);
+		text_1+="\nСинус 0,3:"+Math.sin(0.3);
+		text_1+="\nСлучайное число:"+Math.random();
+		text_1+="\nСлучайное число:"+Math.floor(Math.random()*11);
+	/*Math.floor(5.3);
+	Math.ceil(5.6);
+	alert(text_1);*/
+	
+	/*var date= new Date();
+	 text_2="\nГод сейчас -" + date.getFullYear();
+	 text_2+="\nМесяц сейчас -" + date.getMonth();
+	 text_2+="\nДень сейчас -" + date.getDate();
+	 text_2+="\nМинут сейчас -" + date.getMinutes();
+	 text_2+="\nСекунд сейчас -" + date.getSeconds();
+	// alert(text_2);
+	 var date=new Date (2000,0,12,14,23,43)
+	  date.setFullYear(1997);
+	 text_2="\nГод сейчас -" + date.getFullYear();
+	 text_2+="\nМесяц сейчас -" + date.getMonth();
+	 text_2+="\nДень сейчас -" + date.getDate();
+	 text_2+="\nМинут сейчас -" + date.getMinutes();
+	 text_2+="\nСекунд сейчас -" + date.getSeconds();
+	  alert(text_2);*/
+	 /* var arr=[1,30,49,59,43]
+	  text="Длинна массива:"+arr.length;
+	  text+="\nМассив состоит из:"+arr.join(", ");
+	  text+="\nСортированный массив:"+(arr.sort()).join(", ");
+	  alert(text);
+	  */
+	  var string="Небольшая строка";
+	  var text ="Длинна строки равна:"+string.length;
+	  text+="\nСтрока в верхнем регистре:"+string.toUpperCase();
+	  text+="\nСтрока в нижнем регистре:"+string.toLowerCase();
+	  text+="\nОбрезанная строка:"+string.substring(1,5);
+	  text+="\n 3й символ:"+string.charAt(3);
+	  text+="\n стро начинается с индекса:"+string.indexOf('стро');
+	  alert(text);
+	</script>
+	<div align="left">Здравствуйте,</div>
+	<p id="name"> Как Вас зовут?</p>
+	<div id="name"></div>
+	<input id ="DinamicButton" type="button" onclick="inicialization()" value="Указать имя">
+	<link rel="stylesheet" type="text/css" href="Style main.css">
+	<meta http-equiv="content-type"/>
+	<link rel="import" type="text/html" href="file:///E:/fotoclub/header.html">
+	
+	<h2><a class="main" href="file:///E:/fotoclub/Main.html"><b><i>Фотостудия</i> "ПОРТРЕТ"</b></a></h2>
+	<div class="go">
+		<a href="file:///E:/fotoclub/buy.html"><b><img src="https://cdn.pixabay.com/photo/2016/01/23/11/26/button-1157269_640.png" width="200px" height="80px" </img></b></a> 
+		<a href="file:///E:/fotoclub/ourjob.html"><b><img src="https://cdn.pixabay.com/photo/2016/01/23/11/26/button-1157269_640.png" width="200px" height="80px" </img></b></a> 
+		<a href="file:///E:/fotoclub/priselist.html"><b><img src="https://cdn.pixabay.com/photo/2016/01/23/11/26/button-1157269_640.png" width="200px" height="80px" </img></b></a> 
+		<a href="file:///E:/fotoclub/aboutus.html"><b><img src="https://cdn.pixabay.com/photo/2016/01/23/11/26/button-1157269_640.png" width="200px" height="80px" </img></b></a>
+	</div>
+	<br />
+</head>
+<body onload="timer()">
+	
+	<div class="poleback">
+		<img src="black.jpg" width="100%" height="50em" </img>
+		
+		<h2><blockquote>Мы находимся по адресу <i>г. Томск пер. Карповский</blockquote></i></h2>
+
+		<img src="black.jpg" width="100%" height="50px" </img>
+		<p> С момента загрузки страницы прошло: <span id="count"> -1</span> сек.</p>
+		
+		<div align="center">
+			<h2 onclick="alert('Скидки нашей компании')"> <b><i>Специальные предложения</i></b> </h2>
+		</div>
+		<div class="textpole">
+		<form action="" method="post" name="test" id="form"()”>
+			<label for="name">Имя</label>
+				<input type="text" name="name" placeholder="Имя" id="name" /><br /><br />
+			<label for="password">Пароль:</label>
+				<input type="password" name="password" placeholder="Пароль" id="password" /><br /><br />
+			<label for="Repassword">Проверка пароля:</label>
+				<input type="Repassword" name="Repassword" placeholder="Повторите пороль" id="Repassword" /><br /><br />
+			<label for="email">Email:</label>
+				<input type="email" name="email" placeholder="Введите email" id="email" /><br /><br />
+			<span> Пол:</span>
+				<input type="radio" name="sex" id="sex"  value="Мужской"/><label> Мужской</label>
+				<input type="radio" name="sex" id="sex"  value="Женский"/><label> Женский </label><br /><br />
+				<input type="button" onclick="valid(document.getElementById('form'))" value="Готово" name="submit"/>
+		</form>
+
+			<article> При преобретении 3 фото, каждое последующее фото делается с 10% скидкой на весь чек!</article>
+			<p> Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция</p>
+			<p> Акция/Акция/Акция/Акция/Акция/
+			Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/</p>
+			<p>Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/
+		акия/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/
+		</p><p>Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/
+	Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/
+	Акция/Акция/Акция/Акция/Акция/Акцсия/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/
+	Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/
+		</p>
+		<p>Акция/Акция/Акция/</p>
+		<p>Акция/Акция/Акция/</p>
+		<p>Акция/Акция/Акция/Акция/</p>
+		<p>/Акция/Акция/Акция/Акцияv/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция
+	/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция
+	/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция
+	/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция/Акция
+		</p>
+		</div>
+		<br />
+		</div>
+		</div>
+		<div class="foto">
+		<img src="black.jpg" width="100%" height="50px" </img>
+		</div>
+		<div align="right"><a href="#up"><img src="upp.png" width="70px" height="70px"</img></a>
+		</div>
+		<div align="center">
+		<div class="footer"><footer><i><small>Фотостудтя "Портрет", все права защищены<small><i></footer></div>
+		</div>
+	
+
+	
+</body>
+</html>
